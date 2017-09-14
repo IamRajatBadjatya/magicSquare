@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="form-group">
+    <br>
+    <p>Enter a Number to Convert it to Roman Number</p>
+    <input class="form-control" 
+            type="text"
+            ng-model="vm.userInput"
+            ng-keypress="vm.validateUserInput($event)"
+            >
+    <br>
+    <div ng-if="vm.invalidInput" 
+          class="alert alert-danger">
+          Wrong input
+    </div>
+  </div>
+  <div class="form-group" 
+        ng-if="vm.convertedRomanNumber">
+        <p>Converted RomanValue : {{vm.convertedRomanNumber}}</p>
+  </div>
+  <button class="btn btn-primary form-group" 
+          ng-click="vm.convertToRomanNumber()">
+          Convert
+  </button>
+</div>
