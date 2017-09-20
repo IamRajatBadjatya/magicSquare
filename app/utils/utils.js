@@ -3,7 +3,7 @@
   'use strict';
 
   angular.module('myApp.utils', [
-    'app.constants'
+    'myApp.constants'
   ]);
 
 })(window.angular);

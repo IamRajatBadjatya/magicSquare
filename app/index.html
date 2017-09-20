@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Sort Matrix</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -23,19 +23,20 @@
   <![endif]-->
 
   <div ng-app="myApp">
-       <convertor title-of-my-tpl="'Rajat is my name!'"></convertor>
+    <sort></sort>
   </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="bower_components/angular/angular.min.js"></script>
-  <script src="app.js"></script>
-  <script src="constants/baseRomanNumbers.constant.js"></script>
+
+  <script src="constants/valid-matrix.constant.js"></script>
   <script src="utils/utils.js"></script>
-  <script src="utils/convert/convert.factory.js"></script>
-  <script src="components/convertor/convertor.component.js"></script>
-  <script src="components/convertor/convertor.controller.js"></script>
+  <script src="utils/sort/sort.factory.js"></script>
+  <script src="app.js"></script>
+  <script src="components/sort/sort.component.js"></script>
+  <script src="components/sort/sort.controller.js"></script>
 
 </body>
 </html>

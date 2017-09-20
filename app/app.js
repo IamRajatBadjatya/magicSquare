@@ -4,8 +4,9 @@
   
   // Declare app level module which depends on views, and components
   angular.module('myApp', [
+    'myApp.constants',
     'myApp.utils',
-    'myApp.components.convertor'
+    'myApp.components.sort'
   ]);
 
 })(window.angular);

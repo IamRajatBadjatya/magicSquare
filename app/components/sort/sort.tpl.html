@@ -1,0 +1,51 @@
+<div class="container">
+  <form name="sortForm">
+    <div class="form-group">
+      <br>
+      <strong>Enter Integers from 0 to 15, in any order, separated by a space</strong>
+      <input class="form-control" 
+             type="text"
+             ng-model="vm.userInput"
+             ng-keypress="vm.validateUserInput($event, sortForm)"
+             minlength="37"
+             maxlength="37"
+             required
+             name="userInput">
+      <br>
+      <span class="help-block" ng-if="(sortForm.userInput.$touched && sortForm.userInput.$invalid) || sortForm.$invalid">
+        {{ vm.errorMessage }}
+      </span>
+    </div>
+    
+    
+    <div ng-if="sortForm.$submitted">
+      <strong>This was your input matrix</strong>
+      <table class="table table-bordered">
+        <tbody>
+          <tr ng-repeat="row in vm.inputMatrix" class="warning">
+            <td ng-repeat="col in row"><strong>{{ col }}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div ng-if="sortForm.$submitted">
+      <strong>This is the sorted matrix</strong>
+      <table class="table table-bordered">
+        <tbody>
+          <tr ng-repeat="row in vm.sortedMatrix" class="success">
+            <td ng-repeat="col in row"><strong>{{ col }}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button class="btn btn-primary form-group" 
+            ng-click="vm.processInput(sortForm)"
+            ng-disabled="sortForm.$invalid"
+            type="submit">
+            Convert
+    </button>
+
+  </form>
+</div>
